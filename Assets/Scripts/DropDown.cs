@@ -2,25 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using ProjectD.Scripts;
 
 using Debug = UnityEngine.Debug;
 
-public class DropDown : MonoBehaviour
+namespace ProjectD.Scripts
 {
-
-    public void HandleInputData(int val)
+    public class DropDown : MonoBehaviour
     {
-        if (val == 0)
+        public void HandleInputData(int val)
         {
-            Debug.Log("Option 1");
-        }
-        if (val == 1)
-        {
-            Debug.Log("Option 2");
-        }
-        if (val == 2)
-        {
-            Debug.Log("Option 3");
+            var itemList = new ItemList();
+            var selItem = itemList.items[val];
+            StateNameController.item = selItem;
         }
     }
 }
+
