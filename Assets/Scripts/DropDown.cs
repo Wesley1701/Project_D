@@ -12,8 +12,12 @@ namespace ProjectD.Scripts
     {
         public void HandleInputData(int val)
         {
+            if (val == 0){
+                StateNameController.item = null;
+                return;
+            }
             var itemList = new ItemList();
-            var selItem = itemList.items[val];
+            var selItem = itemList.items[val-1];
             StateNameController.item = selItem;
         }
     }

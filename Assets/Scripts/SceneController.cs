@@ -6,18 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void checkValues()
     {
-
+        if (StateNameController.item != null && StateNameController.userLocation != null)
+        {
+            NextScene();
+        }
+        else
+        {
+            UnityEngine.Debug.Log("Select a value");
+        }
+        
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void LoadMenuScene()
     {
         SceneManager.LoadScene("ItemMenu");
@@ -25,9 +25,9 @@ public class SceneController : MonoBehaviour
 
     public void NextScene()
     {
-        UnityEngine.Debug.Log($"{StateNameController.item.name} can be found at these coordinates: {StateNameController.item.xPos}, {StateNameController.item.yPos}, {StateNameController.item.zPos}");
-        SceneManager.LoadScene("BlankAR");
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        UnityEngine.Debug.Log($"The user can be found at these coordinates: {StateNameController.userLocation.GetValue()}");
+        UnityEngine.Debug.Log($"{StateNameController.item.name} can be found at these coordinates: {StateNameController.item.location.GetValue()}");
+        SceneManager.LoadScene("Bokgf");
     }
 
     public void ReloadScene()

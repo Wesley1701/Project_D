@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ItemMenu.unity
     guid: 16f9c7e354e92bd40aec5619d213b96e
   - enabled: 1
+    path: Assets/Scenes/Bokgf.unity
+    guid: ffae274ae1174c140b66b7033b1007a7
+  - enabled: 1
     path: Assets/Scenes/BlankAR.unity
     guid: 6bdce89659816455b9f906fc62d19910
   m_configObjects:

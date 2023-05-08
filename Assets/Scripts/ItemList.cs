@@ -54,6 +54,7 @@ namespace ProjectD.Scripts
             var DropOptions = CreateListOfNames();
             ItemDropdown = transform.GetComponent<TMP_Dropdown>();
             ItemDropdown.options.Clear();
+            ItemDropdown.options.Add(new TMP_Dropdown.OptionData("Select an item to locate"));
             foreach (string option in DropOptions)
             {
                 ItemDropdown.options.Add(new TMP_Dropdown.OptionData(option));
@@ -67,27 +68,46 @@ namespace ProjectD.Scripts
     {
         public int id;
         public string name;
-        public int xPos;
-        public int yPos;
-        public int zPos;
+        public Location location;
 
         public Item(int Id, string Name)
         {
-            var random = new System.Random();
             id = Id;
             name = Name;
-            xPos = random.Next(1, 500);
-            yPos = random.Next(1, 500);
-            zPos = random.Next(1, 500);
+            location = new Location();
         }
 
-        public Item(int Id, string Name, int x, int y, int z)
+        public Item(int Id, string Name, double x, double y, double z)
         {
             id = Id;
             name = Name;
-            xPos = x;
-            yPos = y;
-            zPos = z;
+            location = new Location(x, y, z);
+        }
+    }
+
+    public class Location
+    {
+        public double xPos;
+        public double yPos;
+        public double zPos;
+
+        public Location()
+        {
+            var random = new System.Random();
+            this.xPos = random.NextDouble();
+            this.yPos = random.NextDouble();
+            this.zPos = random.NextDouble();
+        }
+        public Location(double x, double y, double z)
+        {
+            this.xPos = x;
+            this.yPos = y;
+            this.zPos = z;
+        }
+
+        public string GetValue()
+        {
+            return $"{this.xPos}, {this.yPos}, {this.zPos}";
         }
     }
 }
