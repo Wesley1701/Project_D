@@ -192,13 +192,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.arcore": {
-<<<<<<< HEAD
       "version": "5.0.3",
       "depth": 1,
-=======
-      "version": "4.2.7",
-      "depth": 0,
->>>>>>> 78c11a1bb010866e15ffe449a1e60ebad960550d
       "source": "registry",
       "dependencies": {
         "com.unity.xr.arfoundation": "5.0.3",
@@ -239,13 +234,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.arsubsystems": {
-<<<<<<< HEAD
       "version": "5.0.2",
-      "depth": 2,
-=======
-      "version": "4.2.7",
       "depth": 1,
->>>>>>> 78c11a1bb010866e15ffe449a1e60ebad960550d
       "source": "registry",
       "dependencies": {
         "com.unity.xr.arfoundation": "5.0.2"
