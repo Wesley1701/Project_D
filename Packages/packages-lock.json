@@ -31,14 +31,15 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.feature.ar": {
-      "version": "1.0.1",
+      "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
       "dependencies": {
-        "com.unity.xr.arfoundation": "5.0.3",
-        "com.unity.xr.arkit": "5.0.3",
-        "com.unity.xr.arcore": "5.0.3",
-        "com.unity.xr.magicleap": "6.2.2",
+        "com.unity.xr.arfoundation": "4.2.7",
+        "com.unity.xr.arkit": "4.2.7",
+        "com.unity.xr.arcore": "4.2.7",
+        "com.unity.xr.magicleap": "6.4.1",
+        "com.unity.xr.arkit-face-tracking": "4.2.7",
         "com.unity.xr.openxr": "1.6.0"
       }
     },
