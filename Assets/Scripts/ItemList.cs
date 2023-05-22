@@ -17,7 +17,7 @@ namespace ProjectD.Scripts
             new Item(1, "Boxes"),
             new Item(2, "Bags"),
             new Item(3, "Pallets"),
-            new Item(4, "Bins"),
+            new Item(4, "Package"),
             new Item(5, "Storage containers"),
             new Item(6, "Cardboard dividers"),
             new Item(7, "Plastic wrapping"),
