@@ -8,41 +8,34 @@ public class SpawnerScript : MonoBehaviour
     public GameObject[] myObjects;
     public GameObject[] myObjectsHighlighted;
     public Transform[] spawnpoints;
-    GameObject final;
-    int counter = 0;
+    int nummer;
 
     GameObject CHOsen = StateNameController.Chosen;
     
-    void Update()
+    void Start()
     {
-        if(Input.touches[0].phase == TouchPhase.Began && counter == 1)
+        for (int i = 0; i < myObjects.Length; i++)
         {
-            //int randomIndex = Random.Range(0, myObjects.Length);
+            if(myObjects[i] == CHOsen){
+                nummer = i;
+            }
+        }
+        int randomIndexPoints = Random.Range(0, spawnpoints.Length);
+        Transform neww = spawnpoints[randomIndexPoints];
+        Instantiate(myObjectsHighlighted[nummer], neww.position, Quaternion.identity);
 
-            int randomIndexPoints = Random.Range(0, spawnpoints.Length);
-            Transform neww = spawnpoints[randomIndexPoints];
-            Vector3 spawnPos = neww.position;
+        for(int j = 0; j < spawnpoints.Length;j++)
+        {
+            int randomIndex = Random.Range(0, myObjects.Length);
+
+            //int randomIndexPoints = Random.Range(0, spawnpoints.Length);
+            Transform newww = spawnpoints[j];
+            Vector3 spawnPos = newww.position;
             float radius = 0.01f;
             if (!Physics.CheckSphere(spawnPos, radius)) 
             {
-                Instantiate(myObjects[0], neww.position, Quaternion.identity);
+                Instantiate(myObjects[randomIndex], newww.position, Quaternion.identity);
             }
-        }
-
-        if(Input.touches[0].phase == TouchPhase.Began && counter == 0)
-        {
-            for (int i = 0; i < myObjects.Length; i++)
-            {
-                if(myObjects[i] == CHOsen){
-                    final = myObjectsHighlighted[i];
-                }
-            }
-            //int randomIndex = Random.Range(0, myObjects.Length);
-
-            int randomIndexPoints = Random.Range(0, spawnpoints.Length);
-            Transform neww = spawnpoints[randomIndexPoints];
-            Instantiate(myObjectsHighlighted[0], neww.position, Quaternion.identity);
-            counter = counter + 1;
         }
     }
 }
