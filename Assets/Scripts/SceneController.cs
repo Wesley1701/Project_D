@@ -4,34 +4,42 @@ using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneController : MonoBehaviour
+namespace ProjectD.Scripts 
 {
-    public void checkValues()
+    public class SceneController : MonoBehaviour
     {
-        if (StateNameController.item != null && StateNameController.userLocation != null)
+        public void checkValues()
         {
-            NextScene();
+            if (StateNameController.item != null || StateNameController.userLocation != null)
+            {
+                NextScene();
+            }
+            else
+            {
+                UnityEngine.Debug.Log("Select a value");
+            }
         }
-        else
+
+        public void LoadQRScanner()
         {
-            UnityEngine.Debug.Log("Select a value");
+            SceneManager.LoadScene("QRScanner");
         }
-        
-    }
-    public void LoadMenuScene()
-    {
-        SceneManager.LoadScene("ItemMenu");
-    }
 
-    public void NextScene()
-    {
-        UnityEngine.Debug.Log($"The user can be found at these coordinates: {StateNameController.userLocation.GetValue()}");
-        UnityEngine.Debug.Log($"{StateNameController.item.name} can be found at these coordinates: {StateNameController.item.location.GetValue()}");
-        SceneManager.LoadScene("Bokgf");
-    }
+        public void LoadMenuScene()
+        {
+            SceneManager.LoadScene("ItemMenu");
+        }
 
-    public void ReloadScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        public void NextScene()
+        {
+            //UnityEngine.Debug.Log($"The user can be found at these coordinates: {StateNameController.userLocation.GetValue()}");
+            UnityEngine.Debug.Log($"{StateNameController.item.name} can be found at these coordinates: {StateNameController.item.location.GetValue()}");
+            SceneManager.LoadScene("AR-Section");
+        }
+
+        public void ReloadScene()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }

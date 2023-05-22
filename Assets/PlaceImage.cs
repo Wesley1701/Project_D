@@ -43,6 +43,7 @@ public class PlaceImage : MonoBehaviour
             {
                 Application.OpenURL("https://en.wikipedia.org/wiki/King_of_Spades");
             }
+            
         }
 
 
