@@ -15,6 +15,6 @@ public class AlwaysLookAtTarget : MonoBehaviour
         // Vector3 targetPostition = new Vector3( a.position.x, 
         //                                 a.position.y, 
         //                                 a.position.z ) ;
-        this.transform.LookAt(a.transform);
+        this.transform.LookAt(a.transform.position);
     }
 }
