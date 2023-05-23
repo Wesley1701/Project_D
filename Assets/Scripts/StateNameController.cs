@@ -8,5 +8,4 @@ public class StateNameController : MonoBehaviour
 {
     public static Location userLocation;
     public static Item item;
-    public static GameObject Chosen;
 }

@@ -1,20 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ProjectD.Scripts;
 
 public class AlwaysLookAtTarget : MonoBehaviour
 {
 
-    public Transform Target;
+    GameObject a = SpawnerScript.targot;
 
     // Update is called once per frame
     void Update()
     {
         //transform.LookAt(Target);
-        Vector3 targetPostition = new Vector3( Target.position.x, 
-                                        Target.position.y, 
-                                        Target.position.z ) ;
-        this.transform.LookAt( targetPostition ) ;
-        transform.Rotate(0, 90, 0);
+        // Vector3 targetPostition = new Vector3( a.position.x, 
+        //                                 a.position.y, 
+        //                                 a.position.z ) ;
+        this.transform.LookAt(a.transform);
     }
 }

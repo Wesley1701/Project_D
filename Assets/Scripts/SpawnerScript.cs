@@ -10,19 +10,22 @@ public class SpawnerScript : MonoBehaviour
     public Transform[] spawnpoints;
     int nummer;
 
-    GameObject CHOsen = StateNameController.Chosen;
+    public static GameObject targot;
+    string CHOsen;
     
     void Start()
     {
+        CHOsen = StateNameController.item.name;
         for (int i = 0; i < myObjects.Length; i++)
         {
-            if(myObjects[i] == CHOsen){
+            if(myObjects[i].name == CHOsen){
                 nummer = i;
             }
         }
         int randomIndexPoints = Random.Range(0, spawnpoints.Length);
         Transform neww = spawnpoints[randomIndexPoints];
         Instantiate(myObjectsHighlighted[nummer], neww.position, Quaternion.identity);
+        targot = myObjectsHighlighted[nummer];
 
         for(int j = 0; j < spawnpoints.Length;j++)
         {
