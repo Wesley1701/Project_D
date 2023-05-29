@@ -6,8 +6,14 @@ using ProjectD.Scripts;
 public class AlwaysLookAtTarget : MonoBehaviour
 {
 
-    GameObject a = SpawnerScript.targot;
-
+    Transform a;
+    //public GameObject doos;
+    void Start()
+    {
+        a = SpawnerScript.targot;
+        this.transform.LookAt(a.position);
+        this.transform.Rotate(0,90,0);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -15,6 +21,8 @@ public class AlwaysLookAtTarget : MonoBehaviour
         // Vector3 targetPostition = new Vector3( a.position.x, 
         //                                 a.position.y, 
         //                                 a.position.z ) ;
-        this.transform.LookAt(a.transform.position);
+        a = SpawnerScript.targot;
+        this.transform.LookAt(a.position);
+        this.transform.Rotate(0,90,0);
     }
 }

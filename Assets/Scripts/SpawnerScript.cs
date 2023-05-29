@@ -10,7 +10,7 @@ public class SpawnerScript : MonoBehaviour
     public Transform[] spawnpoints;
     int nummer;
 
-    public static GameObject targot;
+    public static Transform targot;
     string CHOsen;
     
     void Start()
@@ -23,21 +23,21 @@ public class SpawnerScript : MonoBehaviour
             }
         }
         int randomIndexPoints = Random.Range(0, spawnpoints.Length);
-        Transform neww = spawnpoints[randomIndexPoints];
-        Instantiate(myObjectsHighlighted[nummer], neww.position, Quaternion.identity);
-        targot = myObjectsHighlighted[nummer];
+        Transform new1 = spawnpoints[randomIndexPoints];
+        Instantiate(myObjectsHighlighted[nummer], new1.position, Quaternion.identity);
+        targot = new1;
 
         for(int j = 0; j < spawnpoints.Length;j++)
         {
             int randomIndex = Random.Range(0, myObjects.Length);
 
             //int randomIndexPoints = Random.Range(0, spawnpoints.Length);
-            Transform newww = spawnpoints[j];
-            Vector3 spawnPos = newww.position;
+            Transform new2 = spawnpoints[j];
+            Vector3 spawnPos = new2.position;
             float radius = 0.01f;
             if (!Physics.CheckSphere(spawnPos, radius)) 
             {
-                Instantiate(myObjects[randomIndex], newww.position, Quaternion.identity);
+                Instantiate(myObjects[randomIndex], new2.position, Quaternion.identity);
             }
         }
     }
