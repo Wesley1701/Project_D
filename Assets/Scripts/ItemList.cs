@@ -23,17 +23,17 @@ namespace ProjectD.Scripts
             new Item(7, "Plastic wrapping"),
             new Item(8, "Foam packaging"),
             new Item(9, "Bubble wrap"),
-            new Item(10, "Packing tape"),
-            new Item(11, "Safety equipment"),
-            new Item(12, "Bar code scanners"),
-            new Item(13, "Shipping labels"),
-            new Item(14, "Mailing envelopes"),
-            new Item(15, "Work gloves"),
-            new Item(16, "Bungee cords"),
-            new Item(17, "Storage racks"),
-            new Item(18, "Shelving units"),
-            new Item(19, "Loading dock equipment"),
-            new Item(20, "Pallet jacks")
+            new Item(10, "Packing tape")
+            // new Item(11, "Safety equipment"),
+            // new Item(12, "Bar code scanners"),
+            // new Item(13, "Shipping labels"),
+            // new Item(14, "Mailing envelopes"),
+            // new Item(15, "Work gloves"),
+            // new Item(16, "Bungee cords"),
+            // new Item(17, "Storage racks"),
+            // new Item(18, "Shelving units"),
+            // new Item(19, "Loading dock equipment"),
+            // new Item(20, "Pallet jacks")
         };
 
         public TMP_Dropdown ItemDropdown;
