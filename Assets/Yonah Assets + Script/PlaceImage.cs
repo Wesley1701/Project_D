@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(ARTrackedImageManager))]
 public class PlaceImage : MonoBehaviour
@@ -37,13 +38,8 @@ public class PlaceImage : MonoBehaviour
             var imageName = trackedImage.referenceImage.name;
             if (string.Compare("HRQR", imageName, StringComparison.OrdinalIgnoreCase) == 0)
             {
-                Application.OpenURL("https://en.wikipedia.org/wiki/King_of_Clubs");
+                SceneManager.LoadScene("ItemMenu");
             }
-            else if (string.Compare("k_spades", imageName, StringComparison.OrdinalIgnoreCase) == 0)
-            {
-                Application.OpenURL("https://en.wikipedia.org/wiki/King_of_Spades");
-            }
-            
         }
 
 
