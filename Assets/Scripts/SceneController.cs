@@ -8,6 +8,7 @@ namespace ProjectD.Scripts
 {
     public class SceneController : MonoBehaviour
     {
+
         public void checkValues()
         {
             if (StateNameController.item != null || StateNameController.userLocation != null)

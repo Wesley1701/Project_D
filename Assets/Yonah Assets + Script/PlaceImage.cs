@@ -15,7 +15,6 @@ public class PlaceImage : MonoBehaviour
     // as their corresponding 2D images in the reference image library 
     public GameObject[] ArPrefabs;
 
-
     private readonly Dictionary<string, GameObject> _instantiatedPrefabs = new Dictionary<string, GameObject>();
 
     void Awake()
@@ -38,6 +37,7 @@ public class PlaceImage : MonoBehaviour
             var imageName = trackedImage.referenceImage.name;
             if (string.Compare("HRQR", imageName, StringComparison.OrdinalIgnoreCase) == 0)
             {
+                SpawnPosition.posx = 6.0f;
                 SceneManager.LoadScene("ItemMenu");
             }
         }
