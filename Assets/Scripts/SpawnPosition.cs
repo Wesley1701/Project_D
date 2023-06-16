@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnPosition : MonoBehaviour
 {
-    public static Transform target1;
+    public Transform target1;
     public static float posx;
     public static float posy;
     public static float posz;
