@@ -14,16 +14,16 @@ namespace ProjectD.Scripts
     {
         public List<Item> items = new List<Item>()
         {
-            new Item(1, "Boxes"),
-            new Item(2, "Bags"),
-            new Item(3, "Pallets"),
-            new Item(4, "Package"),
-            new Item(5, "PackageLow"),
-            new Item(6, "Cardboard dividers"),
-            new Item(7, "Plastic wrapping"),
-            new Item(8, "Foam packaging"),
-            new Item(9, "Bubble wrap"),
-            new Item(10, "Packing tape")
+            //new Item(1, "Boxes"),
+            //new Item(2, "Bags"),
+            //new Item(3, "Pallets"),
+            new Item(1, "Package"),
+            new Item(2, "PackageLow(Placeholdername)"),
+            //new Item(6, "Cardboard dividers"),
+            //new Item(7, "Plastic wrapping"),
+            //new Item(8, "Foam packaging"),
+            //new Item(9, "Bubble wrap"),
+            //new Item(10, "Packing tape")
             // new Item(11, "Safety equipment"),
             // new Item(12, "Bar code scanners"),
             // new Item(13, "Shipping labels"),
