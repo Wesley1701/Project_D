@@ -21,6 +21,11 @@ namespace ProjectD.Scripts
             }
         }
 
+        public void BackButton()
+        {
+            SceneManager.LoadScene("ItemMenu");
+        }
+
         public void LoadQRScanner()
         {
             SceneManager.LoadScene("QRScanner");
